@@ -1,13 +1,11 @@
 <script>
-	import { v4 } from "uuid";
-	import Noty from 'noty';
+  import { v4 } from "uuid";
+  import Noty from "noty";
 
-	import 'noty/lib/noty.css';
-	import 'noty/lib/themes/nest.css';
+  import "noty/lib/noty.css";
+  import "noty/lib/themes/nest.css";
 
-  let products = [
-    
-  ];
+  let products = [];
 
   let product = {
     id: "",
@@ -48,14 +46,14 @@
     const productIndex = products.findIndex(p => p.id === product.id);
     products[productIndex] = updatedProduct;
     cleanProduct();
-		let editStatus = false;
-		
-		new Noty({
-			theme: 'nest',
-			type: 'success',
-			timeout: 3000,
-			text: 'Product Update Successfully'
-		}).show();
+
+    new Noty({
+      theme: "nest",
+      type: "success",
+      timeout: 3000,
+      text: "Product Update Successfully"
+    }).show();
+    editStatus = false;
   };
 
   const onSubmitHandler = e => {
